@@ -1,0 +1,7 @@
+{
+  "itemGroup.digitalandanalogcircuits.dac_tab": "Create: Digital and Analog Circuits",
+
+  "block.digitalandanalogcircuits.white_wire": "White Wire",
+
+  "tooltip.digitalandanalogcircuits.wire": "Conducts electricity. Only connects to wires of the same colour."
+}
