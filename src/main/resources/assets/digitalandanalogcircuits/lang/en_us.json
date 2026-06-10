@@ -1,7 +1,34 @@
 {
   "itemGroup.digitalandanalogcircuits.dac_tab": "Create: Digital and Analog Circuits",
 
-  "block.digitalandanalogcircuits.white_wire": "White Wire",
+  "block.digitalandanalogcircuits.white_wire": "White Insulated Copper Wire",
+  "block.digitalandanalogcircuits.orange_wire": "Orange Insulated Copper Wire",
+  "block.digitalandanalogcircuits.magenta_wire": "Magenta Insulated Copper Wire",
+  "block.digitalandanalogcircuits.light_blue_wire": "Light Blue Insulated Copper Wire",
+  "block.digitalandanalogcircuits.yellow_wire": "Yellow Insulated Copper Wire",
+  "block.digitalandanalogcircuits.lime_wire": "Lime Insulated Copper Wire",
+  "block.digitalandanalogcircuits.pink_wire": "Pink Insulated Copper Wire",
+  "block.digitalandanalogcircuits.gray_wire": "Gray Insulated Copper Wire",
+  "block.digitalandanalogcircuits.light_gray_wire": "Light Gray Insulated Copper Wire",
+  "block.digitalandanalogcircuits.cyan_wire": "Cyan Insulated Copper Wire",
+  "block.digitalandanalogcircuits.purple_wire": "Purple Insulated Copper Wire",
+  "block.digitalandanalogcircuits.blue_wire": "Blue Insulated Copper Wire",
+  "block.digitalandanalogcircuits.brown_wire": "Brown Insulated Copper Wire",
+  "block.digitalandanalogcircuits.green_wire": "Green Insulated Copper Wire",
+  "block.digitalandanalogcircuits.red_wire": "Red Insulated Copper Wire",
+  "block.digitalandanalogcircuits.black_wire": "Black Insulated Copper Wire",
 
-  "tooltip.digitalandanalogcircuits.wire": "Conducts electricity. Only connects to wires of the same colour."
+  "block.digitalandanalogcircuits.bare_copper_wire": "Bare Copper Wire",
+  "block.digitalandanalogcircuits.bare_iron_wire": "Bare Iron Wire",
+  "block.digitalandanalogcircuits.bare_silver_wire": "Bare Silver Wire",
+  "block.digitalandanalogcircuits.bare_gold_wire": "Bare Gold Wire",
+  "block.digitalandanalogcircuits.bare_aluminum_wire": "Bare Aluminum Wire",
+
+  "tooltip.digitalandanalogcircuits.wire": "Conducts electricity. Only connects to wires of the same colour.",
+  "tooltip.digitalandanalogcircuits.wire_material": "Material: %s",
+  "tooltip.digitalandanalogcircuits.wire_color": "Color: %s",
+  "tooltip.digitalandanalogcircuits.resistivity": "Resistivity: %s Ω·mm²/m",
+  "tooltip.digitalandanalogcircuits.conductivity": "Conductivity: %s%% IACS",
+  "tooltip.digitalandanalogcircuits.bare_wire_warning": "§c⚠ WARNING: Electrocution hazard! Do not step on when powered.",
+  "tooltip.digitalandanalogcircuits.insulated_wire_safe": "§a✔ Safe to touch. Insulated for protection."
 }

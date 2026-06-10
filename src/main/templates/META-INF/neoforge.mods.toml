@@ -28,7 +28,7 @@ description    = '''
 # Create dependency – optional for now, required once we use its API
  [[dependencies.digitalandanalogcircuits]]
      modId      = "create"
-     type       = "optional"
-     versionRange = "[0.5,)"
+     type       = "required"
+     versionRange = "[6.0.10,6.1.0)"
      ordering   = "AFTER"
      side       = "BOTH"

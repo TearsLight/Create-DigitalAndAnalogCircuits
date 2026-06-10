@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "digitalandanalogcircuits:white_wire" },
+    { "item": "minecraft:brown_dye" }
+  ],
+  "result": {
+    "id": "digitalandanalogcircuits:brown_wire",
+    "count": 1
+  }
+}

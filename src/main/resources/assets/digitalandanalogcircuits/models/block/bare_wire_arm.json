@@ -1,0 +1,7 @@
+﻿{
+  "parent": "digitalandanalogcircuits:block/wire_arm",
+  "textures": {
+    "particle": "digitalandanalogcircuits:block/bare_copper_wire",
+    "arm": "digitalandanalogcircuits:block/bare_copper_wire"
+  }
+}

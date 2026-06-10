@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "create:copper_nugget" },
+    { "item": "create:copper_nugget" }
+  ],
+  "result": {
+    "id": "digitalandanalogcircuits:bare_copper_wire",
+    "count": 2
+  }
+}

@@ -1,74 +1,96 @@
 package cn.cherrylanterns.digitalandanalogcircuits.register;
 
 import cn.cherrylanterns.digitalandanalogcircuits.DigitalAndAnalogCircuits;
-import net.minecraft.world.item.BlockItem;
+import cn.cherrylanterns.digitalandanalogcircuits.api.WireColor;
+import cn.cherrylanterns.digitalandanalogcircuits.api.WireMaterial;
+import cn.cherrylanterns.digitalandanalogcircuits.item.wire.BareWireItem;
+import cn.cherrylanterns.digitalandanalogcircuits.item.wire.InsulatedWireItem;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+/**
+ * 数字电路物品注册表
+ * Digital Circuits Item Registry
+ * <p>
+ * 所有方块物品均使用与对应方块相同的注册名，以便自动匹配模型。
+ */
 public class DACItems {
 
-    public static final DeferredRegister.Items ITEMS =
-            DeferredRegister.createItems(DigitalAndAnalogCircuits.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS =
+            DeferredRegister.create(Registries.ITEM, DigitalAndAnalogCircuits.MOD_ID);
 
-    // ── 导线 ──────────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> WHITE_WIRE      = blockItem("white_wire",      DACBlocks.WHITE_WIRE);
-    public static final DeferredItem<BlockItem> ORANGE_WIRE     = blockItem("orange_wire",     DACBlocks.ORANGE_WIRE);
-    public static final DeferredItem<BlockItem> MAGENTA_WIRE    = blockItem("magenta_wire",    DACBlocks.MAGENTA_WIRE);
-    public static final DeferredItem<BlockItem> LIGHT_BLUE_WIRE = blockItem("light_blue_wire", DACBlocks.LIGHT_BLUE_WIRE);
-    public static final DeferredItem<BlockItem> YELLOW_WIRE     = blockItem("yellow_wire",     DACBlocks.YELLOW_WIRE);
-    public static final DeferredItem<BlockItem> LIME_WIRE       = blockItem("lime_wire",       DACBlocks.LIME_WIRE);
-    public static final DeferredItem<BlockItem> PINK_WIRE       = blockItem("pink_wire",       DACBlocks.PINK_WIRE);
-    public static final DeferredItem<BlockItem> GRAY_WIRE       = blockItem("gray_wire",       DACBlocks.GRAY_WIRE);
-    public static final DeferredItem<BlockItem> LIGHT_GRAY_WIRE = blockItem("light_gray_wire", DACBlocks.LIGHT_GRAY_WIRE);
-    public static final DeferredItem<BlockItem> CYAN_WIRE       = blockItem("cyan_wire",       DACBlocks.CYAN_WIRE);
-    public static final DeferredItem<BlockItem> PURPLE_WIRE     = blockItem("purple_wire",     DACBlocks.PURPLE_WIRE);
-    public static final DeferredItem<BlockItem> BLUE_WIRE       = blockItem("blue_wire",       DACBlocks.BLUE_WIRE);
-    public static final DeferredItem<BlockItem> BROWN_WIRE      = blockItem("brown_wire",      DACBlocks.BROWN_WIRE);
-    public static final DeferredItem<BlockItem> GREEN_WIRE      = blockItem("green_wire",      DACBlocks.GREEN_WIRE);
-    public static final DeferredItem<BlockItem> RED_WIRE        = blockItem("red_wire",        DACBlocks.RED_WIRE);
-    public static final DeferredItem<BlockItem> BLACK_WIRE      = blockItem("black_wire",      DACBlocks.BLACK_WIRE);
+    // ===== 裸导线 BlockItem — 注册名与 DACBlocks 一致 =====
 
-    // ── 连接器 ────────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> BIDIRECTIONAL_CONNECTOR =
-            blockItem("bidirectional_connector", DACBlocks.BIDIRECTIONAL_CONNECTOR);
-    public static final DeferredItem<BlockItem> FOUR_WAY_CONNECTOR =
-            blockItem("four_way_connector", DACBlocks.FOUR_WAY_CONNECTOR);
+    public static final DeferredHolder<Item, BareWireItem> BARE_COPPER_WIRE =
+            ITEMS.register("bare_copper_wire",
+                    () -> new BareWireItem(DACBlocks.BARE_COPPER_WIRE.get(),
+                            new Item.Properties(), WireMaterial.COPPER));
 
-    // ── 交流发电机 ────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> TWO_PHASE_ALTERNATOR =
-            blockItem("two_phase_alternator", DACBlocks.TWO_PHASE_ALTERNATOR);
-    public static final DeferredItem<BlockItem> THREE_PHASE_ALTERNATOR =
-            blockItem("three_phase_alternator", DACBlocks.THREE_PHASE_ALTERNATOR);
+    public static final DeferredHolder<Item, BareWireItem> BARE_IRON_WIRE =
+            ITEMS.register("bare_iron_wire",
+                    () -> new BareWireItem(DACBlocks.BARE_IRON_WIRE.get(),
+                            new Item.Properties(), WireMaterial.IRON));
 
-    // ── 电动机 ────────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> SMALL_MOTOR       = blockItem("small_motor",       DACBlocks.SMALL_MOTOR);
-    public static final DeferredItem<BlockItem> MEDIUM_MOTOR      = blockItem("medium_motor",      DACBlocks.MEDIUM_MOTOR);
-    public static final DeferredItem<BlockItem> LARGE_MOTOR       = blockItem("large_motor",       DACBlocks.LARGE_MOTOR);
-    public static final DeferredItem<BlockItem> EXTRA_LARGE_MOTOR = blockItem("extra_large_motor", DACBlocks.EXTRA_LARGE_MOTOR);
+    public static final DeferredHolder<Item, BareWireItem> BARE_SILVER_WIRE =
+            ITEMS.register("bare_silver_wire",
+                    () -> new BareWireItem(DACBlocks.BARE_SILVER_WIRE.get(),
+                            new Item.Properties(), WireMaterial.SILVER));
 
-    // ── 电源管理 ──────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> VOLTAGE_REGULATOR  = blockItem("voltage_regulator",  DACBlocks.VOLTAGE_REGULATOR);
-    public static final DeferredItem<BlockItem> STEP_UP_TRANSFORMER = blockItem("step_up_transformer", DACBlocks.STEP_UP_TRANSFORMER);
-    public static final DeferredItem<BlockItem> STEP_DOWN_TRANSFORMER = blockItem("step_down_transformer", DACBlocks.STEP_DOWN_TRANSFORMER);
+    public static final DeferredHolder<Item, BareWireItem> BARE_GOLD_WIRE =
+            ITEMS.register("bare_gold_wire",
+                    () -> new BareWireItem(DACBlocks.BARE_GOLD_WIRE.get(),
+                            new Item.Properties(), WireMaterial.GOLD));
 
-    // ── 半导体元件 ────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> DIODE      = blockItem("diode",      DACBlocks.DIODE);
-    public static final DeferredItem<BlockItem> LED        = blockItem("led",        DACBlocks.LED);
-    public static final DeferredItem<BlockItem> TRANSISTOR = blockItem("transistor", DACBlocks.TRANSISTOR);
-    public static final DeferredItem<BlockItem> MOSFET     = blockItem("mosfet",     DACBlocks.MOSFET);
+    public static final DeferredHolder<Item, BareWireItem> BARE_ALUMINUM_WIRE =
+            ITEMS.register("bare_aluminum_wire",
+                    () -> new BareWireItem(DACBlocks.BARE_ALUMINUM_WIRE.get(),
+                            new Item.Properties(), WireMaterial.ALUMINUM));
 
-    // ── 逻辑门 ────────────────────────────────────────────────────────────
-    public static final DeferredItem<BlockItem> AND_GATE  = blockItem("and_gate",  DACBlocks.AND_GATE);
-    public static final DeferredItem<BlockItem> OR_GATE   = blockItem("or_gate",   DACBlocks.OR_GATE);
-    public static final DeferredItem<BlockItem> NOT_GATE  = blockItem("not_gate",  DACBlocks.NOT_GATE);
-    public static final DeferredItem<BlockItem> XOR_GATE  = blockItem("xor_gate",  DACBlocks.XOR_GATE);
-    public static final DeferredItem<BlockItem> XNOR_GATE = blockItem("xnor_gate", DACBlocks.XNOR_GATE);
+    // ===== 绝缘导线 BlockItem — 每色注册名与 DACBlocks 的块名一致 =====
+    // 注意：注册名如 "white_wire" 匹配方块注册名，模型自动查找 models/item/white_wire.json
 
-    // ──────────────────────────────────────────────────────────────────────
-    private static <B extends net.minecraft.world.level.block.Block>
-    DeferredItem<BlockItem> blockItem(String name,
-                                      net.neoforged.neoforge.registries.DeferredBlock<B> block) {
-        return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_WHITE =
+            registerInsulatedWire("white_wire", WireMaterial.COPPER, WireColor.WHITE, DACBlocks.WHITE_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_ORANGE =
+            registerInsulatedWire("orange_wire", WireMaterial.COPPER, WireColor.ORANGE, DACBlocks.ORANGE_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_MAGENTA =
+            registerInsulatedWire("magenta_wire", WireMaterial.COPPER, WireColor.MAGENTA, DACBlocks.MAGENTA_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_LIGHT_BLUE =
+            registerInsulatedWire("light_blue_wire", WireMaterial.COPPER, WireColor.LIGHT_BLUE, DACBlocks.LIGHT_BLUE_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_YELLOW =
+            registerInsulatedWire("yellow_wire", WireMaterial.COPPER, WireColor.YELLOW, DACBlocks.YELLOW_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_LIME =
+            registerInsulatedWire("lime_wire", WireMaterial.COPPER, WireColor.LIME, DACBlocks.LIME_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_PINK =
+            registerInsulatedWire("pink_wire", WireMaterial.COPPER, WireColor.PINK, DACBlocks.PINK_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_GRAY =
+            registerInsulatedWire("gray_wire", WireMaterial.COPPER, WireColor.GRAY, DACBlocks.GRAY_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_LIGHT_GRAY =
+            registerInsulatedWire("light_gray_wire", WireMaterial.COPPER, WireColor.LIGHT_GRAY, DACBlocks.LIGHT_GRAY_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_CYAN =
+            registerInsulatedWire("cyan_wire", WireMaterial.COPPER, WireColor.CYAN, DACBlocks.CYAN_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_PURPLE =
+            registerInsulatedWire("purple_wire", WireMaterial.COPPER, WireColor.PURPLE, DACBlocks.PURPLE_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_BLUE =
+            registerInsulatedWire("blue_wire", WireMaterial.COPPER, WireColor.BLUE, DACBlocks.BLUE_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_BROWN =
+            registerInsulatedWire("brown_wire", WireMaterial.COPPER, WireColor.BROWN, DACBlocks.BROWN_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_GREEN =
+            registerInsulatedWire("green_wire", WireMaterial.COPPER, WireColor.GREEN, DACBlocks.GREEN_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_RED =
+            registerInsulatedWire("red_wire", WireMaterial.COPPER, WireColor.RED, DACBlocks.RED_WIRE);
+    public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_BLACK =
+            registerInsulatedWire("black_wire", WireMaterial.COPPER, WireColor.BLACK, DACBlocks.BLACK_WIRE);
+
+    // ===== 辅助方法 =====
+
+    private static DeferredHolder<Item, InsulatedWireItem> registerInsulatedWire(
+            String name, WireMaterial material, WireColor color, DeferredBlock<?> block) {
+        return ITEMS.register(name,
+                () -> new InsulatedWireItem(block.get(),
+                        new Item.Properties(), material, color));
     }
 }

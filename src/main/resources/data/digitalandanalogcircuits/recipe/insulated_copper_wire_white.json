@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "digitalandanalogcircuits:bare_copper_wire" },
+    { "item": "digitalandanalogcircuits:plastic_sheet" }
+  ],
+  "result": {
+    "id": "digitalandanalogcircuits:white_wire",
+    "count": 1
+  }
+}

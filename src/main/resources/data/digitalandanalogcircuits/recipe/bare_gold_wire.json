@@ -1,0 +1,11 @@
+﻿{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "create:golden_nugget" },
+    { "item": "create:golden_nugget" }
+  ],
+  "result": {
+    "id": "digitalandanalogcircuits:bare_gold_wire",
+    "count": 2
+  }
+}
