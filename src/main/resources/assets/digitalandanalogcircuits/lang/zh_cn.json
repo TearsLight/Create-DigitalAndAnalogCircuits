@@ -24,11 +24,21 @@
   "block.digitalandanalogcircuits.bare_gold_wire": "裸金导线",
   "block.digitalandanalogcircuits.bare_aluminum_wire": "裸铝导线",
 
+  "block.digitalandanalogcircuits.aluminum_ore": "铝矿石",
+  "block.digitalandanalogcircuits.deepslate_aluminum_ore": "深层铝矿石",
+  "block.digitalandanalogcircuits.lithium_ore": "锂矿石",
+  "block.digitalandanalogcircuits.deepslate_lithium_ore": "深层锂矿石",
+
+  "item.digitalandanalogcircuits.raw_aluminum": "粗铝",
+  "item.digitalandanalogcircuits.raw_lithium": "粗锂",
+  "item.digitalandanalogcircuits.aluminum_ingot": "铝锭",
+  "item.digitalandanalogcircuits.lithium_ingot": "锂锭",
+
   "tooltip.digitalandanalogcircuits.wire": "传导电能。只能与相同颜色的导线连接。",
   "tooltip.digitalandanalogcircuits.wire_material": "材料: %s",
   "tooltip.digitalandanalogcircuits.wire_color": "颜色: %s",
-  "tooltip.digitalandanalogcircuits.resistivity": "电阻率: %s Ω·mm²/m",
+  "tooltip.digitalandanalogcircuits.resistivity": "电阻率: %s",
   "tooltip.digitalandanalogcircuits.conductivity": "导电率: %s%% IACS",
-  "tooltip.digitalandanalogcircuits.bare_wire_warning": "§c⚠ 警告: 触电危险！通电时请勿踩踏。",
-  "tooltip.digitalandanalogcircuits.insulated_wire_safe": "§a✔ 安全触碰。绝缘层提供安全保护。"
+  "tooltip.digitalandanalogcircuits.bare_wire_warning": "警告: 触电危险！通电时请勿踩踏。",
+  "tooltip.digitalandanalogcircuits.insulated_wire_safe": "安全触碰。绝缘层提供安全保护。"
 }

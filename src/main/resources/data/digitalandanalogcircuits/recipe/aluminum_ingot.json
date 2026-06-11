@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": { "item": "digitalandanalogcircuits:raw_aluminum" },
+  "result": { "id": "digitalandanalogcircuits:aluminum_ingot" }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "digitalandanalogcircuits:block/bare_wire_core",
+  "textures": {
+    "0": "digitalandanalogcircuits:block/bare_copper_wire"
+  }
+}

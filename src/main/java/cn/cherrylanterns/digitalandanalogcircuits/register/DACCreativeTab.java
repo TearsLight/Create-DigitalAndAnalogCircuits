@@ -22,6 +22,20 @@ public class DACCreativeTab {
                     .title(Component.translatable("itemGroup.digitalandanalogcircuits.dac_tab"))
                     .icon(() -> new ItemStack(DACItems.BARE_COPPER_WIRE.get()))
                     .displayItems((params, output) -> {
+                        // ===== 矿石 =====
+                        output.accept(DACItems.ALUMINUM_ORE.get());
+                        output.accept(DACItems.DEEPSLATE_ALUMINUM_ORE.get());
+                        output.accept(DACItems.LITHIUM_ORE.get());
+                        output.accept(DACItems.DEEPSLATE_LITHIUM_ORE.get());
+
+                        // ===== 原材料 =====
+                        output.accept(DACItems.RAW_ALUMINUM.get());
+                        output.accept(DACItems.RAW_LITHIUM.get());
+
+                        // ===== 锭 =====
+                        output.accept(DACItems.ALUMINUM_INGOT.get());
+                        output.accept(DACItems.LITHIUM_INGOT.get());
+
                         // ===== 裸导线 =====
                         output.accept(DACItems.BARE_COPPER_WIRE.get());
                         output.accept(DACItems.BARE_IRON_WIRE.get());

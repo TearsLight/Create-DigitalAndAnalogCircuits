@@ -24,6 +24,16 @@
   "block.digitalandanalogcircuits.bare_gold_wire": "Bare Gold Wire",
   "block.digitalandanalogcircuits.bare_aluminum_wire": "Bare Aluminum Wire",
 
+  "block.digitalandanalogcircuits.aluminum_ore": "Aluminum Ore",
+  "block.digitalandanalogcircuits.deepslate_aluminum_ore": "Deepslate Aluminum Ore",
+  "block.digitalandanalogcircuits.lithium_ore": "Lithium Ore",
+  "block.digitalandanalogcircuits.deepslate_lithium_ore": "Deepslate Lithium Ore",
+
+  "item.digitalandanalogcircuits.raw_aluminum": "Raw Aluminum",
+  "item.digitalandanalogcircuits.raw_lithium": "Raw Lithium",
+  "item.digitalandanalogcircuits.aluminum_ingot": "Aluminum Ingot",
+  "item.digitalandanalogcircuits.lithium_ingot": "Lithium Ingot",
+
   "tooltip.digitalandanalogcircuits.wire": "Conducts electricity. Only connects to wires of the same colour.",
   "tooltip.digitalandanalogcircuits.wire_material": "Material: %s",
   "tooltip.digitalandanalogcircuits.wire_color": "Color: %s",

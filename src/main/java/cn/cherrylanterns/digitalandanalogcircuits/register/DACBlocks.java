@@ -4,6 +4,8 @@ import cn.cherrylanterns.digitalandanalogcircuits.DigitalAndAnalogCircuits;
 import cn.cherrylanterns.digitalandanalogcircuits.api.WireColor;
 import cn.cherrylanterns.digitalandanalogcircuits.block.wire.BareWireBlock;
 import cn.cherrylanterns.digitalandanalogcircuits.block.wire.WireBlock;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -51,6 +53,17 @@ public class DACBlocks {
     public static final DeferredBlock<BareWireBlock> BARE_ALUMINUM_WIRE =
             registerBareWire("bare_aluminum_wire", MapColor.COLOR_LIGHT_GRAY);
 
+    // ===== 矿石 - 铝 & 锂 =====
+
+    public static final DeferredBlock<DropExperienceBlock> ALUMINUM_ORE =
+            registerOre("aluminum_ore", MapColor.STONE, 0, 0);
+    public static final DeferredBlock<DropExperienceBlock> DEEPSLATE_ALUMINUM_ORE =
+            registerOre("deepslate_aluminum_ore", MapColor.DEEPSLATE, 0, 0);
+    public static final DeferredBlock<DropExperienceBlock> LITHIUM_ORE =
+            registerOre("lithium_ore", MapColor.STONE, 1, 2);
+    public static final DeferredBlock<DropExperienceBlock> DEEPSLATE_LITHIUM_ORE =
+            registerOre("deepslate_lithium_ore", MapColor.DEEPSLATE, 1, 4);
+
     // ===== 工厂方法 =====
 
     /** 注册绝缘导线方块 */
@@ -72,6 +85,18 @@ public class DACBlocks {
                         .strength(0.3f, 1.0f)
                         .sound(SoundType.METAL)
                         .noOcclusion()));
+    }
+
+    /** 注册矿石方块 */
+    private static DeferredBlock<DropExperienceBlock> registerOre(
+            String name, MapColor mapColor, int minExp, int maxExp) {
+        return BLOCKS.register(name, () -> new DropExperienceBlock(
+                ConstantInt.of(maxExp),
+                BlockBehaviour.Properties.of()
+                        .mapColor(mapColor)
+                        .strength(3.0f, 3.0f)
+                        .sound(SoundType.STONE)
+                        .requiresCorrectToolForDrops()));
     }
 
     // ============================================================

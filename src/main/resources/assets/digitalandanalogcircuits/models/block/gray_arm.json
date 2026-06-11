@@ -1,7 +1,7 @@
 ﻿{
   "parent": "digitalandanalogcircuits:block/wire_arm",
   "textures": {
-    "particle": "digitalandanalogcircuits:block/gray",
-    "arm": "digitalandanalogcircuits:block/gray"
+    "particle": "digitalandanalogcircuits:block/gray_wire",
+    "arm": "digitalandanalogcircuits:block/gray_wire"
   }
 }

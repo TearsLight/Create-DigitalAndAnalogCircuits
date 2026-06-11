@@ -1,8 +1,8 @@
 ﻿{
   "parent": "digitalandanalogcircuits:block/wire_core",
   "textures": {
-    "particle": "digitalandanalogcircuits:block/blue",
-    "core": "digitalandanalogcircuits:block/blue",
-    "arm": "digitalandanalogcircuits:block/blue"
+    "particle": "digitalandanalogcircuits:block/blue_wire",
+    "core": "digitalandanalogcircuits:block/blue_wire",
+    "arm": "digitalandanalogcircuits:block/blue_wire"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": { "item": "digitalandanalogcircuits:raw_lithium" },
+  "result": { "id": "digitalandanalogcircuits:lithium_ingot" }
+}

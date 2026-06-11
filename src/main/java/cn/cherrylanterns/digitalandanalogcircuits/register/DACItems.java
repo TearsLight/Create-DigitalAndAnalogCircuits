@@ -6,6 +6,7 @@ import cn.cherrylanterns.digitalandanalogcircuits.api.WireMaterial;
 import cn.cherrylanterns.digitalandanalogcircuits.item.wire.BareWireItem;
 import cn.cherrylanterns.digitalandanalogcircuits.item.wire.InsulatedWireItem;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -84,6 +85,39 @@ public class DACItems {
             registerInsulatedWire("red_wire", WireMaterial.COPPER, WireColor.RED, DACBlocks.RED_WIRE);
     public static final DeferredHolder<Item, InsulatedWireItem> INSULATED_COPPER_WIRE_BLACK =
             registerInsulatedWire("black_wire", WireMaterial.COPPER, WireColor.BLACK, DACBlocks.BLACK_WIRE);
+
+    // ===== 矿石 BlockItem =====
+
+    public static final DeferredHolder<Item, BlockItem> ALUMINUM_ORE =
+            ITEMS.register("aluminum_ore",
+                    () -> new BlockItem(DACBlocks.ALUMINUM_ORE.get(), new Item.Properties()));
+    public static final DeferredHolder<Item, BlockItem> DEEPSLATE_ALUMINUM_ORE =
+            ITEMS.register("deepslate_aluminum_ore",
+                    () -> new BlockItem(DACBlocks.DEEPSLATE_ALUMINUM_ORE.get(), new Item.Properties()));
+    public static final DeferredHolder<Item, BlockItem> LITHIUM_ORE =
+            ITEMS.register("lithium_ore",
+                    () -> new BlockItem(DACBlocks.LITHIUM_ORE.get(), new Item.Properties()));
+    public static final DeferredHolder<Item, BlockItem> DEEPSLATE_LITHIUM_ORE =
+            ITEMS.register("deepslate_lithium_ore",
+                    () -> new BlockItem(DACBlocks.DEEPSLATE_LITHIUM_ORE.get(), new Item.Properties()));
+
+    // ===== 原材料 =====
+
+    public static final DeferredHolder<Item, Item> RAW_ALUMINUM =
+            ITEMS.register("raw_aluminum",
+                    () -> new Item(new Item.Properties()));
+    public static final DeferredHolder<Item, Item> RAW_LITHIUM =
+            ITEMS.register("raw_lithium",
+                    () -> new Item(new Item.Properties()));
+
+    // ===== 锭 =====
+
+    public static final DeferredHolder<Item, Item> ALUMINUM_INGOT =
+            ITEMS.register("aluminum_ingot",
+                    () -> new Item(new Item.Properties()));
+    public static final DeferredHolder<Item, Item> LITHIUM_INGOT =
+            ITEMS.register("lithium_ingot",
+                    () -> new Item(new Item.Properties()));
 
     // ===== 辅助方法 =====
 
